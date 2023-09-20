@@ -6,22 +6,21 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-
-class User extends Model
+class Company extends Model
 {
-    public $timestamps = false;
-
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $fillable = [
-        'first_name',
-        'last_name',
-        'phone',
-        'avatar'
+        'name',
+        'description',
+        'photo'
     ];
 
     public function comment(): BelongsToMany
     {
         return $this->belongsToMany(Comment::class);
     }
+
 }

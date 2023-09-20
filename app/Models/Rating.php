@@ -6,18 +6,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-
-class User extends Model
+class Rating extends Model
 {
-    public $timestamps = false;
-
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $fillable = [
-        'first_name',
-        'last_name',
-        'phone',
-        'avatar'
+        'comments',
+        'total_grades',
+        'top'
     ];
 
     public function comment(): BelongsToMany

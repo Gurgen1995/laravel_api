@@ -50,44 +50,37 @@ php artisan serve
 
 php artisan make:migration create_users_table
 
+### Start the push in the GitHub
+
+- git init
+- git add .
+- git commit -m "name commit"
+- git branch -M main
+- git remote add origin https://github.com/Gurgen1995/laravel_api.git
+- git push -u origin main
+
 ### Start the migration to create tables (users, companies, comments) in the database
 
 php artisan migrate
+____________
+### Creating models, controllers, seeds, factories
+
+- php artisan make:model nameModel
+- php artisan make:controller nameController
+- php artisan make:seeder nameSeeder
+- php artisan make:factory nameFactory
 
 ____________
-Ссылки для запуска импорта данных из API
---------------------
-У нас созданы 4 таблицы в Базе данных:
-* Stocks
-* Incomes
-* Orders
-* Sales
+## Links for interacting with each table <br>(creating a new record, viewing, rectifying and deleting):
 
-Ссылки для запуска импорта данных из API для каждой таблицы:
-* Route::get('/add-stocks', [StockController::class, 'addStock'])->name('stocks.addstock');
-* Route::get('/add-incomes', [IncomeController::class, 'addIncome'])->name('incomes.addincome');
-* Route::get('/add-orders', [OrderController::class, 'addOrder'])->name('orders.addorder');
-* Route::get('/add-sales', [SaleController::class, 'addSale'])->name('sales.addsale');
-
-Пример запуска импорта данных из API в таблицу Orders:
-
-![img_1.png](img_1.png)
-
-
-Ссылки для взаимодествия с каждой таблицей <br>(создание новой записи, просмотр, ректирование и удаление):
-* Route::resource('stocks', 'App\Http\Controllers\StockController');
-* Route::resource('incomes', 'App\Http\Controllers\IncomeController');
-* Route::resource('orders', 'App\Http\Controllers\OrderController');
-* Route::resource('sales', 'App\Http\Controllers\SaleController');
-
-Пример просмотра таблицы Stocks:
-
-![img_2.png](img_2.png)
-
-### !!! В таблицах incomes, orders и sales даты получения данных указаны не текущие, так как за сегодняшний день отсутсвуют данные !!!
-<br>
-<br>
-<br>
+- Route::resource('users', UserController::class);
+  (http://127.0.0.1:8000/users)
+- Route::resource('companies', CompanyController::class);
+  (http://127.0.0.1:8000/companies)
+- Route::resource('comments', CommentController::class);
+  (http://127.0.0.1:8000/comments)
+- Route::resource('ratings', RatingController::class);
+  (http://127.0.0.1:8000/ratings)
 
 ---
 

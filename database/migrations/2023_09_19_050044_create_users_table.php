@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id()->autoIncrement()->nullable();
             $table->string('first_name', 40)->nullable();
             $table->string('last_name', 40)->nullable();
-            $table->string('phone', 11)->nullable();
+            $table->string('phone', 12)->nullable();
             $table->binary('avatar')->nullable();
         });
 
