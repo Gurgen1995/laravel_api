@@ -75,12 +75,16 @@ ____________
 
 - Route::resource('users', UserController::class);
   (http://127.0.0.1:8000/users)
+![users.png](users.png)
 - Route::resource('companies', CompanyController::class);
   (http://127.0.0.1:8000/companies)
+![companies.png](companies.png)
 - Route::resource('comments', CommentController::class);
   (http://127.0.0.1:8000/comments)
+ ![comments.png](comments.png)
 - Route::resource('ratings', RatingController::class);
   (http://127.0.0.1:8000/ratings)
+![ratings.png](ratings.png)
 
 ---
 

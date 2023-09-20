@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Laravel 10 CRUD/ Comment</h2>
+                <h2>Laravel 10 CRUD/ Comments</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('comments.create') }}"> Create comment</a>

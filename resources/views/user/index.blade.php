@@ -25,7 +25,7 @@
         <tr>
             <th>№</th>
             <th>Имя</th>
-            <th class="col-xs-6 col-sm-6 col-md-6">Фамилия</th>
+            <th>Фамилия</th>
             <th>Номер телефона</th>
             <th>Аватар</th>
         </tr>
