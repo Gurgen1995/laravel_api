@@ -87,6 +87,14 @@ ____________
 ![ratings.png](ratings.png)
 
 ---
+## Used documentations:
+
+- https://laravel.com/docs/10.x/installation
+- https://laravel.com/docs/10.x/migrations
+- https://laravel.com/docs/10.x/queries
+- https://laravel.com/docs/10.x/seeding
+- https://laravel.com/docs/10.x/eloquent-factories#main-content
+---
 
 ### Языки программирования и инструменты, которыми я пользуюсь:
 <div>
