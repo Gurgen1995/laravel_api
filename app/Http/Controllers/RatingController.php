@@ -22,11 +22,13 @@ class RatingController extends Controller
             ->orWhere('company_id', '=', '9')
             ->orWhere('company_id', '=', '10')
             ->orWhere('company_id', '=', '11')
-            ->orderBy('top', 'DESC')
+            ->orderBy('comments.grades', 'DESC')
             ->limit(10)
             ->get();
 
+        $i = 1;
 
-        return view('rating.index', compact('ratings', 'request'));
+
+        return view('rating.index', compact('ratings', 'request', 'i'));
     }
 }

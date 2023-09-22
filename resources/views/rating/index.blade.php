@@ -33,7 +33,7 @@
         </tr>
              @foreach ($ratings as $rating)
                  <tr>
-                     <td>{{ $rating->top }}</td>
+                     <td>{{ $i++ }}</td>
                      <td>{{ $rating->name }}</td>
                      <td>{{ $rating->company_id }}</td>
                      <td>{{ $rating->content }}</td>
