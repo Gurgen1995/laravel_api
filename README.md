@@ -84,7 +84,7 @@ ____________
  ![comments.png](comments.png)
 - Route::resource('ratings', RatingController::class);
   (http://127.0.0.1:8000/ratings)
-![ratings.png](ratings.png)
+![top.png](top.png)
 
 ---
 ## Used documentations:
