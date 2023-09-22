@@ -31,7 +31,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('company_id')->nullable();
             $table->longText('content')->nullable();
-            $table->string('grades')->nullable();
+            $table->smallInteger('grades')->nullable();
 
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('company_id')->references('id')->on('companies');

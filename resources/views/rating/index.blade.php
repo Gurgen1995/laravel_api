@@ -1,6 +1,6 @@
 @extends('rating.layout')
 <?php
-/*dd($ratings);*/
+/*dd($rating);*/
 ?>
 @section('content')
 
@@ -25,18 +25,21 @@
 
     <table class="table table-bordered">
         <tr>
+            <th>Топ 10</th>
+            <th>Название компании</th>
             <th>ID компании</th>
             <th>Комментарии компании</th>
             <th>Общая оценка</th>
-            <th>Топ 10</th>
         </tr>
              @foreach ($ratings as $rating)
                  <tr>
+                     <td>{{ $rating->top }}</td>
+                     <td>{{ $rating->name }}</td>
                      <td>{{ $rating->company_id }}</td>
                      <td>{{ $rating->content }}</td>
                      <td>{{ $rating->grades }}</td>
-                     <td>{{ $rating->company_name }}</td>
                  </tr>
              @endforeach
+
     </table>
 @endsection

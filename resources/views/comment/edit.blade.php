@@ -38,10 +38,10 @@
 
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div type="button" >
+                    <div type="button">
                         <strong>ID пользователя:</strong>
                         <select name="user_id" class="form-select">
-                            <option value="{{$comment->user_id}}">{{$comment->user_id}}</option>
+                            <option>{{$comment->user_id}}</option>
                             @foreach($comments as $comment)
                                 <option value="{{$comment->user_id}}">{{$comment->user_id}}</option>
                             @endforeach
@@ -50,12 +50,12 @@
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div type="button">
+                    <div class="form-group" >
                         <strong>ID компании:</strong>
-                        <select name="company_id" class="form-select">
-                            <option value="{{$comment->company_id}}">{{$comment->company_id}}</option>
-                            @foreach($companies as $company)
-                                <option value="{{$company->id}}">{{$company->id}}</option>
+                        <select type="button" name="company_id" class="form-select">
+                            <option>{{ $comment->company_id }}</option>
+                            @foreach($comments as $comment)
+                                <option value="{{$comment->company_id}}">{{$comment->company_id}}</option>
                             @endforeach
                         </select>
                     </div>

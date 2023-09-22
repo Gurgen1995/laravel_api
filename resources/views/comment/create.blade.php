@@ -36,7 +36,7 @@
                 <div type="button" >
                     <strong>ID пользователя:</strong>
                     <select name="user_id" class="form-select">
-                        <option value="...">Choose ID</option>
+                        <option>Choose ID</option>
                         @foreach($users as $user)
                             <option value="{{$user->id}}">{{$user->id}}</option>
                         @endforeach
@@ -48,7 +48,7 @@
                 <div type="button">
                     <strong>ID компании:</strong>
                     <select name="company_id" class="form-select">
-                        <option value="...">Choose ID</option>
+                        <option>Choose ID</option>
                         @foreach($companies as $company)
                             <option value="{{$company->id}}">{{$company->id}}</option>
                         @endforeach
