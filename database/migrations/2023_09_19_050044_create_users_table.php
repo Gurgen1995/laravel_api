@@ -16,14 +16,14 @@ return new class extends Migration
             $table->string('first_name', 40)->nullable();
             $table->string('last_name', 40)->nullable();
             $table->string('phone', 12)->nullable();
-            $table->binary('avatar')->nullable();
+            $table->string('avatar')->nullable();
         });
 
         Schema::create('companies', function (Blueprint $table) {
             $table->id()->autoIncrement()->nullable();
             $table->string('name', 40)->nullable();
             $table->longText('description')->nullable();
-            $table->binary('photo')->nullable();
+            $table->string('photo')->nullable();
         });
 
         Schema::create('comments', function (Blueprint $table) {

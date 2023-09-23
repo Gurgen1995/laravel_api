@@ -43,8 +43,16 @@ class UserController extends Controller
             'avatar' => 'required|file|image|mimes:jpg,png|max:2048'
         ]);
 
+        $input = $request->all();
 
-        User::create($request->all());
+        if ($image = $request->file('avatar')) {
+            $destinationPath = 'images/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['avatar'] = "$profileImage";
+        }
+
+        User::create($input);
 
         return redirect()->route('users.index')->with('success', 'User has been created successfully.');
     }
@@ -69,11 +77,21 @@ class UserController extends Controller
         $request->validate([
             'first_name' => 'required|between:3, 40',
             'last_name' => 'required|between:3, 40',
-            'phone' => 'required|string|regex:/^\+7\d{10}$/',
-            'avatar' => 'required'
+            'phone' => 'required|string|regex:/^\+7\d{10}$/'
         ]);
 
-        $user->update($request->all());
+        $input = $request->all();
+
+        if ($image = $request->file('avatar')) {
+            $destinationPath = 'images/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['avatar'] = "$profileImage";
+        }else{
+            unset($input['image']);
+        }
+
+        $user->update($input);
 
         return redirect()->route('users.index')
             ->with('success','User Has Been updated successfully');

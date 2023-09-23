@@ -34,7 +34,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Аватар:</strong>
-                {{ $user->avatar }}
+                <img src="/images/{{ $user->avatar }}" width="500px">
             </div>
         </div>
     </div>

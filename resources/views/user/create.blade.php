@@ -51,11 +51,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="mb-3">
                     <strong>Аватар:</strong>
-                    <input type="file" name="avatar" id="avatar" class="form-control
-                    @error('avatar') is-invalid @enderror">
-                    @error('avatar')
-                    <span class="text-danger">{{ $message }}</span>
-                    @enderror
+                    <input type="file" name="avatar" class="form-control" placeholder="Avatar">
                 </div>
             </div>
 

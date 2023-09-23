@@ -44,11 +44,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="mb-3">
                     <strong>Логотип:</strong>
-                    <input type="file" name="photo" id="photo" class="form-control
-                    @error('photo') is-invalid @enderror">
-                    @error('photo')
-                    <span class="text-danger">{{ $message }}</span>
-                    @enderror
+                    <input type="file" name="photo" class="form-control" placeholder="Photo">
                 </div>
             </div>
 

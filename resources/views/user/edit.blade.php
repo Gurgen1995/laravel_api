@@ -52,8 +52,8 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="mb-3">
                     <strong>Аватар:</strong>
-                    <input type="file" name="avatar" value="{{ $user->avatar }}" id="avatar" class="form-control
-
+                    <input type="file" name="avatar" class="form-control" placeholder="avatar">
+                    <img src="/images/{{ $user->avatar }}" width="300px">
                 </div>
             </div>
 

@@ -28,7 +28,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Логотип:</strong>
-                {{ $company->photo }}
+                <img src="/logo/{{ $company->photo }}" width="500px">
             </div>
         </div>
     </div>

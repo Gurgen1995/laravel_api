@@ -31,21 +31,22 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Имя:</strong>
-                    <input type="text" name="first_name" value="{{ $company->name }}" class="form-control" placeholder="First name">
+                    <input type="text" name="name" value="{{ $company->name }}" class="form-control" placeholder="First name">
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Описание:</strong>
-                    <input type="text" name="last_name" value="{{ $company->description }}" class="form-control" placeholder="Last name">
+                    <input type="text" name="description" value="{{ $company->description }}" class="form-control" placeholder="Last name">
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
+                <div class="mb-3">
                     <strong>Логотип:</strong>
-                    <input type="text" name="photo" value="{{ $company->photo }}" class="form-control" placeholder="Photo">
+                    <input type="file" name="photo" class="form-control" placeholder="Photo">
+                    <img src="/logo/{{ $company->photo }}" width="300px">
                 </div>
             </div>
 

@@ -35,7 +35,7 @@
                 <td>{{ $user->first_name }}</td>
                 <td>{{ $user->last_name }}</td>
                 <td>{{ $user->phone }}</td>
-                <td>{{ $user->avatar }}</td>
+                <td><img src="/images/{{ $user->avatar }}" width="100px"></td>
                 <td>
                     <form action="{{ route('users.destroy',$user->id) }}" method="POST">
 

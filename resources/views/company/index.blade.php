@@ -33,7 +33,7 @@
                 <td>{{ $company->id }}</td>
                 <td>{{ $company->name }}</td>
                 <td>{{ $company->description }}</td>
-                <td>{{ $company->photo }}</td>
+                <td><img src="/logo/{{ $company->photo }}" width="100px"></td>
                 <td>
                     <form action="{{ route('companies.destroy',$company->id) }}" method="POST">
 

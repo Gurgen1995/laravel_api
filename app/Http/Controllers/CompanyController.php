@@ -33,14 +33,21 @@ class CompanyController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'id' => '',
             'name' => 'required|between:3, 40',
             'description' => 'required|between:150, 400',
             'photo' => 'required|file|image|mimes:png|max:3072'
         ]);
 
+        $input = $request->all();
 
-        Company::create($request->all());
+        if ($image = $request->file('photo')) {
+            $destinationPath = 'logo/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['photo'] = "$profileImage";
+        }
+
+        Company::create($input);
 
         return redirect()->route('companies.index')->with('success', 'Company has been created successfully.');
     }
@@ -63,13 +70,22 @@ class CompanyController extends Controller
     public function update(Request $request, Company $company): RedirectResponse
     {
         $request->validate([
-            'id' => '',
             'name' => 'required|between:3, 40',
-            'description' => 'required|between:150, 400',
-            'photo' => 'required|file|image|mimes:png|max:3072'
+            'description' => 'required|between:150, 400'
         ]);
 
-        $company->update($request->all());
+        $input = $request->all();
+
+        if ($image = $request->file('photo')) {
+            $destinationPath = 'logo/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['photo'] = "$profileImage";
+        }else{
+            unset($input['photo']);
+        }
+
+        $company->update($input);
 
         return redirect()->route('companies.index')
             ->with('success','Company Has Been updated successfully');
