@@ -42,20 +42,20 @@
                         <strong>ID пользователя:</strong>
                         <select name="user_id" class="form-select">
                             <option>{{$comment->user_id}}</option>
-                            @foreach($comments as $comment)
-                                <option value="{{$comment->user_id}}">{{$comment->user_id}}</option>
+                            @foreach($users as $user)
+                                <option value="{{$user->id}}">{{$user->id}}</option>
                             @endforeach
                         </select>
                     </div>
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group" >
+                    <div type="button">
                         <strong>ID компании:</strong>
-                        <select type="button" name="company_id" class="form-select">
+                        <select name="company_id" class="form-select">
                             <option>{{ $comment->company_id }}</option>
-                            @foreach($comments as $comment)
-                                <option value="{{$comment->company_id}}">{{$comment->company_id}}</option>
+                            @foreach($companies as $company)
+                                <option value="{{$company->id}}">{{$company->id}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -64,14 +64,14 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Content:</strong>
-                        <input type="text" name="content" value="{{ $comment->content }}" class="form-control" placeholder="Content">
+                        <input type="text" name="content" value="{{ $comment->content }}" class="form-control" >
                     </div>
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Grades:</strong>
-                        <input type="number" name="grades" value="{{ $comment->grades }}" class="form-control" placeholder="Grades">
+                        <input type="number" name="grades" value="{{ $comment->grades }}" class="form-control" >
                     </div>
                 </div>
 

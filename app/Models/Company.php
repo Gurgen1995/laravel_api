@@ -13,6 +13,7 @@ class Company extends Model
     public $timestamps = false;
 
     protected $fillable = [
+        'id',
         'name',
         'description',
         'photo'

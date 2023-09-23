@@ -27,19 +27,49 @@
         <tr>
             <th>Топ 10</th>
             <th>Название компании</th>
+            <th>Средняя оценка компании</th>
+        </tr>
+        @foreach ($ratings as $rating)
+            <tr>
+                <td>{{ $i++ }}</td>
+                <td>{{ $rating->name }}
+                <td>{{ $rating->grades }}</td>
+            </tr>
+        @endforeach
+
+    </table>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>ID компании</th>
+            <th>Комментарии компании</th>
+        </tr>
+        @foreach ($comments as $comment)
+            <tr>
+                <td>{{ $comment->company_id }}</td>
+                <td>{{ $comment->content }}</td>
+            </tr>
+        @endforeach
+
+    </table>
+
+    {{--<table class="table table-bordered">
+        <tr>
+            <th>Топ 10</th>
+            <th>Название компании</th>
             <th>ID компании</th>
             <th>Комментарии компании</th>
             <th>Общая оценка</th>
         </tr>
-             @foreach ($ratings as $rating)
-                 <tr>
-                     <td>{{ $i++ }}</td>
-                     <td>{{ $rating->name }}</td>
-                     <td>{{ $rating->company_id }}</td>
-                     <td>{{ $rating->content }}</td>
-                     <td>{{ $rating->grades }}</td>
-                 </tr>
-             @endforeach
+        @foreach ($ratings as $rating)
+            <tr>
+                <td>{{ $i++ }}</td>
+                <td>{{ $rating->name }}</td>
+                <td>{{ $rating->company_id }}</td>
+                <td>{{ $rating->content }}</td>
+                <td>{{ $rating->grades }}</td>
+            </tr>
+        @endforeach
 
-    </table>
+    </table>--}}
 @endsection

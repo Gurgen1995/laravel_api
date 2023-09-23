@@ -70,7 +70,7 @@ class UserController extends Controller
             'first_name' => 'required|between:3, 40',
             'last_name' => 'required|between:3, 40',
             'phone' => 'required|string|regex:/^\+7\d{10}$/',
-            'avatar' => 'required|file|image|mimes:jpg,png|max:2048'
+            'avatar' => 'required'
         ]);
 
         $user->update($request->all());

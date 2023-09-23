@@ -28,6 +28,7 @@ class CommentController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
+            'id' => '',
             'user_id' => 'required',
             'company_id' => 'required',
             'content' => 'required|between:150, 550',
@@ -58,6 +59,7 @@ class CommentController extends Controller
     public function update(Request $request, Comment $comment): RedirectResponse
     {
         $request->validate([
+            'id' => '',
             'user_id' => 'required',
             'company_id' => 'required',
             'content' => 'required|between:150, 550',

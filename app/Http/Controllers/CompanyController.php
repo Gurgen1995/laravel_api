@@ -33,6 +33,7 @@ class CompanyController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
+            'id' => '',
             'name' => 'required|between:3, 40',
             'description' => 'required|between:150, 400',
             'photo' => 'required|file|image|mimes:png|max:3072'
@@ -62,6 +63,7 @@ class CompanyController extends Controller
     public function update(Request $request, Company $company): RedirectResponse
     {
         $request->validate([
+            'id' => '',
             'name' => 'required|between:3, 40',
             'description' => 'required|between:150, 400',
             'photo' => 'required|file|image|mimes:png|max:3072'
