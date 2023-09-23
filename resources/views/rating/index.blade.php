@@ -1,7 +1,5 @@
 @extends('rating.layout')
-<?php
-/*dd($rating);*/
-?>
+
 @section('content')
 
     <div class="row">
@@ -52,24 +50,4 @@
         @endforeach
 
     </table>
-
-    {{--<table class="table table-bordered">
-        <tr>
-            <th>Топ 10</th>
-            <th>Название компании</th>
-            <th>ID компании</th>
-            <th>Комментарии компании</th>
-            <th>Общая оценка</th>
-        </tr>
-        @foreach ($ratings as $rating)
-            <tr>
-                <td>{{ $i++ }}</td>
-                <td>{{ $rating->name }}</td>
-                <td>{{ $rating->company_id }}</td>
-                <td>{{ $rating->content }}</td>
-                <td>{{ $rating->grades }}</td>
-            </tr>
-        @endforeach
-
-    </table>--}}
 @endsection
